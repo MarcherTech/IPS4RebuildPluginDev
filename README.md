@@ -5,6 +5,6 @@ If you lost your plugin dev environment for any reason you can build another one
 2. Enable IN_DEV.
 3. Run script via CLI.
 4. Notes
-4a. There are several options as there is quite the mess made upon normal install of a plugin.
-4b. Rebuilding the resources and versions requires the plugin xml uploaded or copied to the plugin folder.
-4c. The rename plugin directory/namespace tool will NOT remove the old directory, you need to do that manually.
+a. There are several options as there is quite the mess made upon normal install of a plugin.
+b. Rebuilding the resources and versions requires the plugin xml uploaded or copied to the plugin folder.
+c. The rename plugin directory/namespace tool will NOT remove the old directory, you need to do that manually.
