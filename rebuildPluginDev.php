@@ -28,7 +28,9 @@ class RebuildPluginDev {
     public function __construct() {
         $this->stdin = \fopen('php://stdin', 'r');
         $this->base = ROOT_PATH . DIRECTORY_SEPARATOR . 'plugins' . DIRECTORY_SEPARATOR;
-        $this->_print("--------------------------------------------\nWelcome to the IPS4 Rebuild Plugin Dev Tool\n--------------------------------------------\n");
+        $this->_print('--------------------------------------------');
+        $this->_print('Welcome to the IPS4 Rebuild Plugin Dev Tool');
+        $this->_print('--------------------------------------------');
         $this->run();
         exit;
     }
@@ -238,7 +240,7 @@ IPSHTML;
     protected function wantCustomXmlName() {
         $this->_print("Please upload or copy plugin xml to plugin folder. Does the plugin xml filename differ from the plugin name?");
         $opt = $this->fetchOption();
-        return (!(int)$opt || $opt === 'n') ? FALSE : TRUE;
+        return (!(int) $opt || $opt === 'n') ? FALSE : TRUE;
     }
 
     protected function getCustomXmlName() {
