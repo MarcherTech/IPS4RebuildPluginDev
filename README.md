@@ -7,3 +7,4 @@ If you lost your plugin(s) development environment for any reason you can build 
 4. Run script via CLI.
 5. The rename plugin directory/namespace tool will NOT remove the old directory, you need to do that manually.
 6. Rebuilding the resources and versions requires the plugin xml uploaded or copied to the plugin folder.
+7. Enter 'x' at any prompt to exit the script.
