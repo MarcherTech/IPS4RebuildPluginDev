@@ -89,7 +89,7 @@ class RebuildPluginDev {
             }
         }
         $this->cloneFolder($this->base . $plugin->location . DIRECTORY_SEPARATOR, $this->base . $namespace . DIRECTORY_SEPARATOR);
-        \IPS\DB::i()->update('core_plugins', array('plugin_location' => $namespace), array('plugin_id=?', $plugin->id));
+        DB::i()->update('core_plugins', array('plugin_location' => $namespace), array('plugin_id=?', $plugin->id));
         \IPS\Plugin\Hook::writeDataFile();
     }
 
