@@ -2,7 +2,7 @@
 
 /**
  * @brief		Rebuild Plugin Dev
- * @author		<a href='http://www.macrhertech.com'>Marcher Technologies</a>
+ * @author		<a href='http://www.marchertech.com'>Marcher Technologies</a>
  */
 
 namespace IPS;
