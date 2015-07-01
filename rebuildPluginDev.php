@@ -9,13 +9,13 @@ namespace IPS;
 
 /* Check this is running at the command line */
 if (\php_sapi_name() !== 'cli') {
-    echo "Not at command line\n";
+    echo 'Not at command line' . \PHP_EOL;
     exit;
 }
 /* Init IPS Suite */
 require_once 'init.php';
 if (!IN_DEV) {
-    echo "IN_DEV must be enabled to use this tool\n";
+    echo 'IN_DEV must be enabled to use this tool' . \PHP_EOL;
     exit;
 }
 new RebuildPluginDev;
@@ -192,7 +192,7 @@ IPSHTML;
         foreach (Db::i()->select(array('word_key', 'word_default'), 'core_sys_lang_words', array('lang_id=? AND word_plugin=?', (int) Lang::defaultLanguage(), (int) $plugin->id))->setKeyField('word_key')->setValueField('word_default') as $key => $word) {
             $lang[$key] = $word;
         }
-        \file_put_contents($base . 'lang.php', '<?php' . PHP_EOL . '$lang = ' . \var_export($lang, TRUE));
+        \file_put_contents($base . 'lang.php', '<?php' . \PHP_EOL . '$lang = ' . \var_export($lang, TRUE));
     }
 
     protected function writeDevWidgetJSON(Plugin $plugin, $base) {
