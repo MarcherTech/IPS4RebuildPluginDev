@@ -238,7 +238,8 @@ IPSHTML;
     }
 
     protected function wantCustomXmlName() {
-        $this->_print("Please upload or copy plugin xml to plugin folder. Does the plugin xml filename differ from the plugin name?");
+        $this->_print('Please upload or copy plugin xml to plugin folder.');
+        $this->_print('Does the plugin xml filename differ from the plugin name?');
         $opt = $this->fetchOption();
         return (!(int) $opt || $opt === 'n') ? FALSE : TRUE;
     }
