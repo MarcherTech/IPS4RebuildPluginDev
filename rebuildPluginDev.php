@@ -175,7 +175,7 @@ IPSHTML;
 
     protected function writeDevCSS(Plugin $plugin, $base) {
         @\mkdir($base . 'css' . DIRECTORY_SEPARATOR, IPS_FOLDER_PERMISSION);
-        foreach (Db::i()->select(array('css_name', 'css_content'), 'core_theme_css', array('css_name=? AND css_plugin=?', 0, (int) $plugin->id))->setKeyField('css_name')->setValueField('css_content') as $name => $css) {
+        foreach (Db::i()->select(array('css_name', 'css_content'), 'core_theme_css', array('css_set_id=? AND css_plugin=?', 0, (int) $plugin->id))->setKeyField('css_name')->setValueField('css_content') as $name => $css) {
             \file_put_contents($base . 'css' . DIRECTORY_SEPARATOR . $name, $css);
         }
     }
